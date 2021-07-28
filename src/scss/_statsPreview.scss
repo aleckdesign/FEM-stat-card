@@ -1,0 +1,79 @@
+@use 'abstracts' as *;
+
+.card {
+  display: flex;
+  background-color: $color-primary;
+  max-width: 1440px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    padding: 4rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    color: $color-white;
+    margin-bottom: 1.5rem;
+
+    & span {
+      color: $color-primary-accent;
+    }
+  }
+
+  &__text {
+    color: $color-white-3;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__right-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary-accent;
+    opacity: 1;
+    mix-blend-mode: hard-light;
+  }
+
+  &__right {
+    // height: 100%;
+    width: 50%;
+    background-image: url(../images/image-header-desktop.jpg);
+    background-size: cover;
+    filter: brightness(0.8);
+  }
+}
+
+.heading-2 {
+  color: $color-white;
+  margin-bottom: 5px;
+}
+.heading-3 {
+  font-size: 0.6rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $color-white-3;
+  font-weight: 300;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
